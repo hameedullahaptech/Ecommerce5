@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F5F4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4D4D8;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A1A1AA;
+}
+
+/* Utility to hide scrollbars for horizontal slider */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Subtle image hover zoom constraint */
+.img-zoom-container {
+  overflow: hidden;
+}
+.img-zoom-container img {
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.img-zoom-container:hover img {
+  transform: scale(1.05);
+}
